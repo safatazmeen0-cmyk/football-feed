@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Youth Football Feed</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>⚽ Youth Football Feed</h1>
+        <p>Daily life • Football • Memories</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <button onclick="showSection('feed')">Feed</button>
+        <button onclick="showSection('gallery')">Gallery</button>
+        <button onclick="showSection('upload')">Upload</button>
+    </nav>
+
+    <!-- FEED SECTION -->
+    <section id="feed" class="active">
+        <div class="post">
+            <img src="https://via.placeholder.com/400" alt="post image">
+            <p class="caption">Training day vibes ⚽🔥</p>
+
+            <div class="actions">
+                <button onclick="likePost(this)">❤️ Like</button>
+                <span class="likes">0</span>
+                <button onclick="downloadImage(this)">⬇️ Download</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery">
+        <h2>📸 Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/200">
+            <img src="https://via.placeholder.com/200">
+            <img src="https://via.placeholder.com/200">
+        </div>
+    </section>
+
+    <!-- UPLOAD SECTION -->
+    <section id="upload">
+        <h2>Upload Image</h2>
+
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="generateCaption()">Generate Caption</button>
+
+        <p id="generatedCaption"></p>
+    </section>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
